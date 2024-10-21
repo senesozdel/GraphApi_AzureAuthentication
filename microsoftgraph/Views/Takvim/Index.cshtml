@@ -1,0 +1,24 @@
+﻿@* @model IEnumerable<Microsoft.Graph.Models.Event>
+
+<h2>Takvim Etkinlikleri</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Başlık</th>
+            <th>Başlangıç Zamanı</th>
+            <th>Bitiş Zamanı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var evt in Model)
+        {
+                <tr>
+                    <td>@evt.Subject</td>
+                    <td>@evt.Start.DateTime</td>
+                    <td>@evt.End.DateTime</td>
+                </tr>
+        }
+    </tbody>
+</table>
+ *@
